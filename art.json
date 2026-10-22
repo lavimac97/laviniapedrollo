@@ -1,0 +1,56 @@
+{
+ "home": {
+  "favourite": "art/001-1.jpg",
+  "portrait": "art/profile2img.png"
+ },
+ "collections": [
+  {
+   "slug": "da-vinci-just-dots",
+   "title": "Da Vinci - Just dots",
+   "images": [
+    "art/IMG_9445-2.jpg",
+    "art/IMG_9491-1.jpg",
+    "art/f631b7d8-dbbe-4fa4-a56e-c4f020fd086b-1.jpg",
+    "art/image-5.png",
+    "art/image-6.png",
+    "art/image-7.png"
+   ]
+  },
+  {
+   "slug": "naruto-skate-edition",
+   "title": "Naruto - Skate Edition",
+   "images": [
+    "art/IMG_3007.jpg",
+    "art/IMG_3009-1.jpg",
+    "art/image-19.png",
+    "art/image-9.png"
+   ]
+  },
+  {
+   "slug": "abstract-playing-with-the-forest",
+   "title": "Abstract - Playing with the forest",
+   "images": [
+    "art/005-1.jpg",
+    "art/006.jpg"
+   ]
+  },
+  {
+   "slug": "lost-a-snake-s-odyssey",
+   "title": "Lost - A snake's Odyssey",
+   "images": [
+    "art/WhatsAppImage2020-02-01at184236.jpeg",
+    "art/WhatsAppImage2020-02-02at105637.jpeg",
+    "art/image-16.png",
+    "art/image-17.png",
+    "art/image-18.png"
+   ]
+  },
+  {
+   "slug": "portrait-dots-again",
+   "title": "Portrait - Dots again?",
+   "images": [
+    "art/WhatsAppImage2020-03-12at115310-1.jpeg"
+   ]
+  }
+ ]
+}

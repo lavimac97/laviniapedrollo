@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lavinia Pedrollo</title>
+<meta name="description" content="Lavinia Pedrollo: PhD researcher at Stanford University working on learning-based design of building support systems, and an artist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#top">Lavinia Pedrollo</a>
+  <button class="menu" id="menu" aria-label="Menu">☰</button>
+  <nav id="nav">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#art">Art</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <img class="portrait" src="art/profile2img.png" alt="Lavinia Pedrollo">
+    <div>
+      <p class="kicker">PhD researcher · Stanford University</p>
+      <h1>I teach machines to design the parts of buildings nobody sees.</h1>
+      <p class="lede">Civil &amp; Environmental Engineering, Stanford. I work on learning-based design of the supports that hold up pipes, ducts and cable trays, and on the datasets and benchmarks that make such learning measurable. When I am not doing that, I draw.</p>
+      <p class="cta"><a class="btn" href="#research">Research</a> <a class="btn ghost" href="#art">Drawings</a></p>
+    </div>
+  </section>
+
+  <section id="about" class="section narrow">
+    <h2>About</h2>
+    <p>I am a PhD candidate in Civil &amp; Environmental Engineering at Stanford University, advised by Martin Fischer. My research sits between structural engineering, building information modelling and machine learning: can a learned system propose complete, verified support assemblies for a building cross-section, and how do we know when it has?</p>
+    <p>Before and alongside the thesis I have worked on computer vision for sports tracking, on metrics for mechanical, electrical and plumbing (MEP) design across project phases, and on generative models for building data. Everything I build is checked against an exact verifier or a measured dataset, and I report mixed results as mixed.</p>
+  </section>
+
+  <section id="research" class="section">
+    <h2>Research</h2>
+    <article class="feature">
+      <div class="feature-text">
+        <p class="tag">PhD thesis</p>
+        <h3>Learning to recommend sets of diverse, verified MEP support assembly designs</h3>
+        <p>Supports for pipes, ducts and cable trays are designed at the cross-section of a corridor, one hanger at a time. The thesis asks whether a learned sequential designer can build such assemblies action by action, avoid partial designs that no completion can rescue, and return a set of distinct verified designs within a fixed compute budget.</p>
+        <ul>
+          <li>A grammar that assembles catalog parts step by step, judged only by an exact verifier covering statics, deflection, buildability, geometry and anchoring, cross-checked against OpenSees.</li>
+          <li>SSA-Bench: a versioned benchmark of 196 cross-sections on seven difficulty levels and two catalogs, with equal wall-clock budgets and installed cost from a published labour model.</li>
+          <li>Certified feasibility labels for partial designs, a critic trained on them, and a design-set track measuring how many distinct verified designs each method returns.</li>
+          <li>Imitation learning, reinforcement learning (RLOO, PPO), GFlowNets, tree search and exact CP-SAT search compared on the same footing.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="feature">
+      <a class="feature-img" href="https://github.com/lavinia-ped/CrossMEP_Dataset" target="_blank" rel="noopener"><img src="img/crossmep-tiers.png" alt="One CrossMEP context per tier, C1 to C8"></a>
+      <div class="feature-text">
+        <p class="tag">Open dataset · CIB W78 2026</p>
+        <h3>CrossMEP: 7,000 generated MEP cross-sections</h3>
+        <p>A method that wants to learn support design needs thousands of cross-sections to practise on; real projects give a handful, under NDA, all alike. CrossMEP generates them: 7,000 contexts in eight tiers, every number traced to EN, IEC, ASME and SMACNA tables, with a seeded generator reproducible to the byte and an evaluation harness with paired tests.</p>
+        <p class="links">
+          <a href="https://github.com/lavinia-ped/CrossMEP_Dataset" target="_blank" rel="noopener">Repository</a>
+          <a href="https://lavinia-ped.github.io/CrossMEP_Dataset/studio/" target="_blank" rel="noopener">Generator Studio</a>
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="cards">
+      <article class="card">
+        <p class="tag">Computer vision · Stanford</p>
+        <h3>Player tracking across sports through meta-learning</h3>
+        <p>With Akayla Hackson and Miguel Gerena. We integrated Model-Agnostic Meta-Learning with the OSNet re-identification model inside the Deep-EIoU tracker, so it adapts quickly to a new sport with little data. The OSNet-MAML model improved HOTA, MOTA and IDF1 over the base tracker on SportsMOT.</p>
+        <p class="links"><a href="https://github.com/Miguel-Gerena/Player_Tracking" target="_blank" rel="noopener">Repository</a></p>
+      </article>
+      <article class="card">
+        <p class="tag">Web tool</p>
+        <h3>MEP Metrics Explorer</h3>
+        <p>An interactive table of metrics for mechanical, electrical and plumbing design: what each measures, what it indicates, and the project phase it belongs to, from feasibility to post-occupancy evaluation, with a bibliography and per-category explanations.</p>
+      </article>
+      <article class="card">
+        <p class="tag">Generative models</p>
+        <h3>Variational autoencoders for IFC building models</h3>
+        <p>Exploratory work on learning compact representations of Industry Foundation Classes (IFC) building data with variational autoencoders.</p>
+      </article>
+      <article class="card">
+        <p class="tag">Open tool</p>
+        <h3>CrossMEP Generator Studio</h3>
+        <p>Pick a tier or an exact mix of services and a seed, and see the cross-section the way a support designer receives it: as an A4 drawing sheet and in 3D, with the call that reproduces it.</p>
+        <p class="links"><a href="https://lavinia-ped.github.io/CrossMEP_Dataset/studio/" target="_blank" rel="noopener">Open the Studio</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="publications" class="section narrow">
+    <h2>Publications</h2>
+    <ol class="pubs">
+      <li><strong>Pedrollo, L.</strong>, Gvadzabia, D., Graeber, T. &amp; Fischer, M. (2026). CrossMEP: A Tiered Synthetic Dataset of Multi-Trade MEP Cross-Sections. A support-design problem distribution for learning-based Structural Support Assembly synthesis. <em>43rd International CIB W78 Conference: IT in Construction</em>, New Delhi.</li>
+      <li><strong>Pedrollo, L.</strong>, Graeber, T. &amp; Fischer, M. (2026). Feasibility-Aware Sequential Synthesis of Structural Support Assemblies: a Canonical Formulation for Automated MEP Support Design. <em>International Symposium on Automation and Robotics in Construction (ISARC)</em>.</li>
+    </ol>
+  </section>
+
+  <section id="art" class="section">
+    <h2>Art</h2>
+    <p class="lede">Here is a small collection of my artworks, I hope You like it! And here You find my favourite!</p>
+    <figure class="favourite"><img src="art/001-1.jpg" alt="My favourite drawing"></figure>
+    <div id="collections"></div>
+  </section>
+
+  <section id="contact" class="section narrow">
+    <h2>Contact</h2>
+    <p class="social">
+      <a href="mailto:laviniap@stanford.edu">laviniap@stanford.edu</a>
+      <a href="https://github.com/lavimac97" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/lavinia-pedrollo-b277931a3/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://instagram.com/lavimac97/" target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">© 2020 - <span id="year"></span> Lavinia Pedrollo</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="close" id="close" aria-label="Close">×</button>
+  <button class="prev" id="prev" aria-label="Previous">‹</button>
+  <img id="lightbox-img" alt="">
+  <button class="next" id="next" aria-label="Next">›</button>
+  <p class="caption" id="caption"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
