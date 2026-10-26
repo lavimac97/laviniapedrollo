@@ -197,3 +197,13 @@ main{max-width:1440px;padding-inline:5vw}
 .scan-code{font: .53rem ui-monospace,monospace;letter-spacing:.12em;color:var(--scan-color);margin:0 0 7px}.scan-title{font:500 1.1rem Inter,system-ui,sans-serif;letter-spacing:-.035em}.scan-description{font-size:.68rem;line-height:1.6;margin:7px 0;color:#c1d2db;max-width:45ch}.scan-footer{display:flex;justify-content:space-between;align-items:center;min-height:28px}.scan-coordinates{font:.51rem ui-monospace,monospace;letter-spacing:.08em;color:#8fabb7}.scan-reset{pointer-events:auto;background:none;border:0;color:#c6ffe9;font:.63rem ui-monospace,monospace;cursor:pointer;padding:9px;min-height:32px}.scan-reset[hidden]{display:none}
 @media(max-width:420px){.portrait-readout{padding:10px 12px 5px}.scan-title{font-size:.95rem}.scan-description{font-size:.62rem;margin:4px 0}.node-art{top:53%}.node-engineering{top:36%}.portrait-node{font-size:.55rem;padding:7px}.scan-code{font-size:.47rem}}
 @media(prefers-reduced-motion:reduce){.hero-art{transform:none!important}.portrait-lens{display:none}.portrait-grid{mask-image:none;opacity:0!important}}
+
+/* Tiny companions appear at the portrait edges as each layer is discovered. */
+.portrait-pets{position:absolute;inset:0;pointer-events:none}
+.portrait-pet{position:absolute;width:clamp(65px,9vw,112px);height:auto;opacity:0;transform:translateY(18px) scale(.65) rotate(-8deg);transform-origin:50% 90%;filter:drop-shadow(0 7px 12px #0005);transition:opacity .2s,transform .4s cubic-bezier(.2,1.6,.4,1)}
+.pet-research{left:3%;top:17%}.pet-engineering{right:3%;top:23%}.pet-art{left:4%;top:41%}
+.pet-antenna{stroke:#a4ffe0;stroke-width:4;stroke-linecap:round}.pet-limbs{stroke:#102b31;stroke-width:6;stroke-linecap:round;fill:none}.pet-smile{stroke:#102b31;stroke-width:3;stroke-linecap:round;fill:none}
+.hero-art[data-mode="research"] .pet-research,.hero-art[data-mode="engineering"] .pet-engineering,.hero-art[data-mode="art"] .pet-art{opacity:1;transform:translateY(0) scale(1) rotate(-5deg)}
+.hero-art[data-mode="engineering"] .pet-engineering{transform:translateY(0) scale(1) rotate(7deg)}
+@media(max-width:420px){.portrait-pet{width:65px}.pet-research{top:20%}.pet-engineering{top:17%}.pet-art{top:34%}}
+@media(prefers-reduced-motion:reduce){.portrait-pet{transform:none!important;transition:none!important}}
