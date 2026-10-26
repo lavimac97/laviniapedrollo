@@ -40,3 +40,13 @@ no camera access, face recognition, or visitor tracking is used.
 Verified in the local browser: all three mode selections, Space-key activation,
 Escape reset, selected-button states, loaded portrait, and no horizontal overflow
 at 707px. JavaScript syntax and whitespace checks pass.
+
+Companions now have keyboard-accessible reaction buttons: the alien lifts a star,
+the robot assembles a miniature frame, and the art creature splashes neon ink.
+Their eyes follow mouse movement within the portrait; reduced-motion preferences
+keep eyes and reactions static. Reactions finish after 1.4 seconds, with no
+persistent animation loops or accumulating particles. Escape returns focus to
+the portrait controls before hiding a focused companion. The stats and About
+section now extend the opening’s ink-black, mint, blue and lilac palette.
+Verified all three keyboard reactions, one-visible-companion state, Escape focus
+restoration, and About layout without horizontal overflow at 1063px.
