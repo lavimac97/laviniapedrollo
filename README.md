@@ -74,3 +74,20 @@ accessible overlay opens the CrossMEP repository in a new tab. The separate
 Generator Studio link opens the interactive application. This preview requires
 the externally hosted Studio to be available. Verified the live drawing and 3D
 view render in the browser and the overlay targets the intended GitHub URL.
+
+### AI portrait transformations (current interaction)
+
+This supersedes the earlier SVG companion and CSS-filter playground. Original,
+Tech, Art and Monsters now crossfade between the uploaded photograph and three
+AI-generated edits of that photograph, stored in `img/portrait-*.jpg`. The edits
+were generated with the built-in image generation tool, preserving identity,
+pose and composition as closely as possible; they are creative variations, not
+pixel-aligned facial morphs. No AI service is called by the website.
+
+Hover across the photo or its style buttons to preview; click/tap a style to pin
+it, or select Original/press Escape to restore the uploaded photo. Images are
+decoded before display, stale asynchronous selections are ignored, and reduced
+motion disables the crossfade. The untouched original is the default and remains
+available if JavaScript or an edit fails to load. All three edits loaded in the
+browser; Tech/Art/Monsters selection and Escape reset were verified, with no
+horizontal overflow at 1063px.

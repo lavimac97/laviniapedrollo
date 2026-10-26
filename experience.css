@@ -33,3 +33,13 @@ body{overflow-x:clip}.reading-progress{position:absolute;bottom:-1px;left:0;widt
 .studio-preview-caption>span{display:flex;align-items:center;gap:8px}.studio-preview-caption i{width:5px;height:5px;border-radius:50%;background:#a4ffe0;box-shadow:0 0 8px #a4ffe0}.studio-preview-caption strong{font-weight:500;color:#a4ffe0}
 .crossmep-preview{padding-bottom:48px}.studio-preview-link:hover .studio-preview-caption{background:#12252f}.studio-preview-link:focus-visible{outline:2px solid #a4ffe0;outline-offset:-5px;border-radius:12px}
 @media(max-width:420px){.studio-preview-caption{padding:14px 10px;font-size:.54rem}}
+
+/* Actual AI-edited photographs replace the earlier decorative filter effects. */
+.hero-art .hero-photo,.hero-art[data-mode] .hero-photo{filter:none;transform:none}
+.hero-art{transform:none!important}.portrait-variants{position:absolute;inset:12px;overflow:hidden;pointer-events:none;border-radius:2px}
+.portrait-variant{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 38%;opacity:0;transition:opacity .65s ease;pointer-events:none}
+.portrait-variant.is-visible{opacity:1}.ai-interface{z-index:3}.ai-controls{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(120deg,#07121bf2,#111c2af0);border-top:1px solid #83d9cb66;pointer-events:auto;backdrop-filter:blur(14px)}
+.ai-filters{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.ai-filters button{flex:1;min-height:40px;background:#14252f;color:#deedf4;border:1px solid #38505c;border-radius:5px;padding:8px;font:.64rem ui-monospace,monospace;cursor:pointer;transition:background .2s,border-color .2s}
+.ai-filters button:hover{border-color:#a4ffe0}.ai-filters button[aria-pressed="true"]{background:#a4ffe0;color:#09141a;border-color:#a4ffe0}.ai-caption{font:.56rem ui-monospace,monospace;color:#b6cbd7;line-height:1.6;margin:10px 0 0}.ai-controls .scan-code{color:#a4ffe0}
+@media(max-width:420px){.ai-controls{padding:11px}.ai-filters{gap:4px}.ai-filters button{font-size:.55rem;padding:7px 5px}.ai-caption{font-size:.5rem}}
+@media(prefers-reduced-motion:reduce){.portrait-variant{transition:none}}
