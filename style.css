@@ -153,3 +153,30 @@ main{max-width:1440px;padding-inline:5vw}
 
 .threshold.in-color{color:#211832}.threshold.in-color .eyebrow{color:#35234f}
 @media(prefers-reduced-motion:reduce){.threshold{color:#211832}.threshold .eyebrow{color:#35234f}}
+
+/* Neon opening: light, data and human presence. */
+.site-header{background:#090e14f2;color:#edf8f9;border-bottom:1px solid #27353d;--ink:#edf8f9;--muted:#b6c4cc;--line:#344550;--accent:#9dffe0;--bg:#090e14}
+.site-header .brand{font-family:Inter,system-ui,sans-serif;font-size:1rem;letter-spacing:-.04em;font-weight:600}
+.hero{position:relative;isolation:isolate;overflow:hidden;margin:0 -5vw;padding:64px 5vw 90px;background:#090e14;color:#f0f7fa;--ink:#f0f7fa;--muted:#b5c4cf;--accent:#9dffe0;--bg:#090e14;grid-template-columns:1.15fr 1fr;gap:5vw}
+.hero:before{content:'';position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse at 77% 40%,#156b6638,transparent 48%),radial-gradient(ellipse at 48% 90%,#49369430,transparent 45%)}
+.hero:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(#b0d6e607 1px,transparent 1px),linear-gradient(90deg,#b0d6e607 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(transparent,#000)}
+.signal-field{position:absolute;inset:0 0 0 27%;z-index:-1;pointer-events:none;color:#79fbd2;opacity:.26;mask-image:linear-gradient(90deg,transparent,#000 30%);animation:signal-drift 4s ease-out both}
+.signal-field svg{width:100%;height:100%}
+@keyframes signal-drift{from{transform:translate3d(0,-2%,0) scale(1)}to{transform:translate3d(2%,3%,0) scale(1.08)}}
+.hero .kicker{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.64rem;letter-spacing:.16em;display:flex;align-items:center;gap:10px}
+.hero .kicker:before{content:'';display:inline-block;width:6px;height:6px;flex-shrink:0;border-radius:50%;background:#9dffe0;box-shadow:0 0 14px #9dffe0}
+.hero h1{font-family:Inter,system-ui,sans-serif;font-size:clamp(3rem,5.2vw,5.5rem);font-weight:500;letter-spacing:-.07em;line-height:1.04;margin:32px 0}
+.hero h1 em{font-style:normal;font-weight:500;background:linear-gradient(110deg,#9dffe0 10%,#a2ddff 55%,#c2a5ff 95%);background-clip:text;-webkit-background-clip:text;color:transparent}
+.hero-intro{font-weight:500;font-size:.92rem;color:#e6f0f4}.hero .lede{font-size:.88rem;line-height:1.85;max-width:48ch}.hero .cta{margin-top:30px;gap:12px}
+.hero .btn{background:#b2ffe4;color:#091713;border:1px solid #b2ffe4;border-radius:0;font-size:.75rem;font-weight:600;box-shadow:0 0 28px #9dffe014}
+.hero .btn:hover{background:#dcfff2;box-shadow:0 0 26px #9dffe037}.hero .btn.ghost{background:#0b141ab3;border-color:#45616b;color:#edf8f9}
+.hero-art{position:relative;height:min(70vh,720px);margin:20px 0 30px;padding:12px;border:1px solid #78e9d152;background:#a3ffe008;box-shadow:0 0 65px #6af9d00d}
+.hero-photo{border-radius:2px;object-position:center 38%;filter:saturate(.8);position:relative}
+.hero-art:after{content:'';position:absolute;inset:-1px;pointer-events:none;background:linear-gradient(#a3ffe0,#a3ffe0) left top/32px 2px no-repeat,linear-gradient(#a3ffe0,#a3ffe0) left top/2px 32px no-repeat,linear-gradient(#a3ffe0,#a3ffe0) right bottom/32px 2px no-repeat,linear-gradient(#a3ffe0,#a3ffe0) right bottom/2px 32px no-repeat}
+.portrait-label{position:absolute;top:-25px;left:0;font-family:ui-monospace,monospace;font-size:.55rem;letter-spacing:.15em;color:#9dffe0}
+.portrait-note{margin:24px -12px 0;font-family:ui-monospace,monospace;font-size:.58rem;color:#d2e9eb}.portrait-note span{color:#9aaeb9}
+.chapter-line{padding-top:24px;border-top:0}
+@media(min-width:1441px){.hero{margin-inline:calc((1340px - 100vw)/2);padding-inline:max(5vw,calc((100vw - 1196px)/2))}}
+@media(max-width:900px){.hero h1{font-size:clamp(2.8rem,5.5vw,4rem)}}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:40px;padding-top:40px;padding-bottom:65px}.hero h1{font-size:clamp(2.8rem,9.8vw,4.8rem)}.hero-art{height:auto;aspect-ratio:4/5;margin:20px 0 35px}.hero .lede{max-width:54ch}.signal-field{inset:15% -30% 0 0;opacity:.2}.hero .kicker{font-size:.56rem}.portrait-note{font-size:.54rem}}
+@media(prefers-reduced-motion:reduce){.signal-field{animation:none}}
