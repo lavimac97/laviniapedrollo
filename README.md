@@ -103,3 +103,16 @@ The Pause/Play motion button, offscreen observer and page-visibility listener
 control loops; reduced-motion preferences render static edits immediately.
 Verified keyboard style switching, all layers paused via Pause motion, resume,
 Escape returning to Original, and no horizontal overflow in the desktop preview.
+
+### Publications and ISARC presentation
+
+The publication list matches the four records on the supplied Google Scholar
+profile (v_Ih3-QAAAAJ), checked 2026-10-26. Added the 2023 MiniRocket/IoT paper
+(IEEE DOI 10.1109/WF-IoT58464.2023.10539550; authors also verified via arXiv
+2310.14758 and ETH Zurich) and the 2019 camera-system paper (Aalto University
+research record). The ISARC record links to the IAARC paper and DOI
+10.22260/ISARC2026/0011 and embeds the supplied YouTube video lxdEpBOb7ns using
+the privacy-enhanced player, with lazy loading, an accessible title, fullscreen,
+and a direct watch link. Browser-verified the presentation thumbnail/player and
+publication layout at 1063px; no autoplay is requested. Static checks confirmed
+four records, unique IDs and the correct video ID.

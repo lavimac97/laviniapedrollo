@@ -69,3 +69,15 @@ body{overflow-x:clip}.reading-progress{position:absolute;bottom:-1px;left:0;widt
 .portrait-motion-paused .portrait-scene{animation:none!important;transition:none!important;mask-image:none!important}
 @media(prefers-reduced-motion:reduce){.portrait-drift,.portrait-weather{display:none}.portrait-scene{animation:none!important;transition:none!important;mask-image:none!important}}
 .hero-art[data-mode=""] .portrait-weather *,.hero-art[data-mode=""] .portrait-weather:before,.hero-art:not([data-mode]) .portrait-weather *,.hero-art:not([data-mode]) .portrait-weather:before{animation-play-state:paused}
+
+/* Publication records and an inline conference presentation. */
+.publications-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:28px;margin-bottom:35px}
+.publications-heading h2{font-family:Inter,system-ui,sans-serif;font-size:clamp(2.5rem,4.4vw,4.4rem);line-height:1.1;font-weight:500;letter-spacing:-.055em;max-width:14ch;margin:0}
+.scholar-link{flex-shrink:0;padding:13px 17px;border:1px solid var(--line);border-radius:5px;text-decoration:none;color:var(--accent);font:.72rem ui-monospace,monospace;transition:border-color .2s,background .2s}
+.scholar-link:hover{border-color:var(--accent);background:var(--bg2)}
+.pubs h3{font-family:Inter,system-ui,sans-serif;font-size:clamp(1.15rem,1.8vw,1.55rem);line-height:1.4;letter-spacing:-.03em;color:var(--ink);font-weight:500;margin:0 0 12px}
+#publications .pubs p{font-size:.86rem;line-height:1.8;margin:8px 0}.pubs .pub-subtitle{color:var(--muted)}.pubs .pub-links{display:flex;flex-wrap:wrap;gap:9px 24px}.pubs .pub-links a{margin-top:0;border-bottom:1px solid var(--line);padding-bottom:3px}
+.publication-video{margin:25px 0 5px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.publication-video iframe{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0;background:#090e14}
+.publication-video figcaption{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 15px;font:.61rem ui-monospace,monospace;color:var(--muted)}.publication-video figcaption a{margin:0;font-size:.63rem}
+@media(max-width:760px){.publications-heading{flex-direction:column;gap:20px}.publication-video figcaption{flex-wrap:wrap}.pubs li>div{min-width:0}}
