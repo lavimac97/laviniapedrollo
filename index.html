@@ -54,10 +54,11 @@
       <span class="portrait-label">HUMAN INTELLIGENCE / 01</span>
       <img class="hero-photo" src="img/lavinia-headshot.jpg" width="1465" height="2048" alt="Lavinia Pedrollo at Stanford" fetchpriority="high">
       <div class="portrait-variants" aria-hidden="true">
-        <img class="portrait-variant" data-variant="tech" src="img/portrait-tech.jpg" alt="" loading="lazy" decoding="async">
-        <img class="portrait-variant" data-variant="art" src="img/portrait-art.jpg" alt="" loading="lazy" decoding="async">
-        <img class="portrait-variant" data-variant="monsters" src="img/portrait-monsters.jpg" alt="" loading="lazy" decoding="async">
+        <div class="portrait-scene" data-scene="tech"><img class="portrait-variant" data-variant="tech" src="img/portrait-tech.jpg" alt="" loading="lazy" decoding="async"><img class="portrait-drift" src="img/portrait-tech.jpg" alt="" loading="lazy" decoding="async"></div>
+        <div class="portrait-scene" data-scene="art"><img class="portrait-variant" data-variant="art" src="img/portrait-art.jpg" alt="" loading="lazy" decoding="async"><img class="portrait-drift" src="img/portrait-art.jpg" alt="" loading="lazy" decoding="async"></div>
+        <div class="portrait-scene" data-scene="monsters"><img class="portrait-variant" data-variant="monsters" src="img/portrait-monsters.jpg" alt="" loading="lazy" decoding="async"><img class="portrait-drift" src="img/portrait-monsters.jpg" alt="" loading="lazy" decoding="async"></div>
       </div>
+      <div class="portrait-weather" aria-hidden="true"><i style="--particle:0"></i><i style="--particle:1"></i><i style="--particle:2"></i><i style="--particle:3"></i><i style="--particle:4"></i><i style="--particle:5"></i><i style="--particle:6"></i><i style="--particle:7"></i><i style="--particle:8"></i><i style="--particle:9"></i><i style="--particle:10"></i><i style="--particle:11"></i></div>
       <div class="portrait-interface ai-interface" hidden>
         <div class="ai-controls">
           <p class="scan-code">PORTRAIT PLAYGROUND / AI EDITS</p>
@@ -67,7 +68,7 @@
             <button data-filter="art" aria-pressed="false">Art</button>
             <button data-filter="monsters" aria-pressed="false">Monsters ✦</button>
           </div>
-          <p class="ai-caption">Hover to transform · Click a style to keep it</p>
+          <div class="ai-meta"><p class="ai-caption">Hover to transform · Click a style to keep it</p><button class="portrait-motion" type="button" aria-pressed="false">Pause motion</button></div>
         </div>
       </div>
       <p class="portrait-note">Lavinia Pedrollo <span>Stanford, California</span></p>

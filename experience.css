@@ -43,3 +43,29 @@ body{overflow-x:clip}.reading-progress{position:absolute;bottom:-1px;left:0;widt
 .ai-filters button:hover{border-color:#a4ffe0}.ai-filters button[aria-pressed="true"]{background:#a4ffe0;color:#09141a;border-color:#a4ffe0}.ai-caption{font:.56rem ui-monospace,monospace;color:#b6cbd7;line-height:1.6;margin:10px 0 0}.ai-controls .scan-code{color:#a4ffe0}
 @media(max-width:420px){.ai-controls{padding:11px}.ai-filters{gap:4px}.ai-filters button{font-size:.55rem;padding:7px 5px}.ai-caption{font-size:.5rem}}
 @media(prefers-reduced-motion:reduce){.portrait-variant{transition:none}}
+
+/* Living portraits: soft radial blends, peripheral motion, and a steady face. */
+@property --portrait-radius{syntax:'<percentage>';inherits:false;initial-value:170%}
+.portrait-scene{position:absolute;inset:0;opacity:0;transition:opacity 1.25s cubic-bezier(.22,.61,.36,1);pointer-events:none;--portrait-radius:170%}
+.portrait-scene.is-visible{opacity:1;z-index:1}.portrait-scene .portrait-variant{opacity:1;transition:none;mask-image:none}
+.portrait-scene.is-entering{animation:portrait-liquid-reveal 1.25s cubic-bezier(.22,.61,.36,1);mask-image:radial-gradient(circle at var(--reveal-x,50%) var(--reveal-y,45%),#000 calc(var(--portrait-radius) - 18%),transparent var(--portrait-radius))}
+@keyframes portrait-liquid-reveal{from{--portrait-radius:0%}to{--portrait-radius:170%}}
+.portrait-drift{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;pointer-events:none;mask-image:radial-gradient(ellipse 35% 39% at 51% 43%,transparent 65%,#000 100%);animation:portrait-breathe 9s ease-in-out infinite alternate;transform-origin:50% 45%;opacity:.65;animation-play-state:paused}
+.portrait-scene.is-visible .portrait-drift{animation-play-state:running}.portrait-scene[data-scene="art"] .portrait-drift{animation-name:portrait-paint-flow;animation-duration:11s}.portrait-scene[data-scene="monsters"] .portrait-drift{animation-duration:7s}
+@keyframes portrait-breathe{from{transform:scale(1.005) translateY(0)}to{transform:scale(1.028) translateY(-3px)}}
+@keyframes portrait-paint-flow{from{transform:scale(1.01) rotate(-.35deg)}to{transform:scale(1.035) rotate(.35deg)}}
+.portrait-weather{position:absolute;inset:12px;overflow:hidden;pointer-events:none;z-index:2;opacity:0;transition:opacity 1s;mask-image:radial-gradient(ellipse 30% 35% at 50% 43%,transparent 65%,#000 100%)}
+.hero-art[data-mode="tech"] .portrait-weather,.hero-art[data-mode="art"] .portrait-weather,.hero-art[data-mode="monsters"] .portrait-weather{opacity:1}
+.portrait-weather:before{content:'';position:absolute;inset:-30%;background:conic-gradient(from 50deg at 50% 50%,transparent 0deg,#9dffe025 40deg,transparent 90deg,#b8a4ff20 170deg,transparent 240deg);mix-blend-mode:screen;animation:portrait-light-orbit 18s linear infinite}
+.portrait-weather i{position:absolute;left:calc(5% + var(--particle)*8%);top:calc(7% + var(--particle)*7%);width:3px;height:3px;border-radius:50%;background:#a4ffe0;box-shadow:0 0 9px #b8a4ff;animation:portrait-particle calc(5s + var(--particle)*.3s) ease-in-out infinite alternate;animation-delay:calc(var(--particle)*-.6s)}
+.hero-art[data-mode="tech"] .portrait-weather i{height:22px;width:1px;background:linear-gradient(transparent,#a4ffe0,transparent)}
+.hero-art[data-mode="art"] .portrait-weather i{width:20px;height:9px;border-radius:60% 10%;background:#c2a5ff44;box-shadow:0 0 15px #a4ffe033}
+.hero-art[data-mode="monsters"] .portrait-weather i{width:7px;height:7px;background:#e3c3ff;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+@keyframes portrait-light-orbit{to{transform:rotate(360deg)}}
+@keyframes portrait-particle{from{transform:translate3d(-4px,12px,0);opacity:.25}to{transform:translate3d(7px,-22px,0);opacity:.85}}
+.ai-meta{display:flex;gap:10px;justify-content:space-between;align-items:center;margin-top:8px}.ai-meta .ai-caption{margin:0;flex:1}.portrait-motion{min-height:32px;padding:5px 7px;flex-shrink:0;background:transparent;color:#a4ffe0;border:1px solid #38505c;border-radius:4px;font:.52rem ui-monospace,monospace;cursor:pointer}.portrait-motion:disabled{cursor:default;color:#b6cbd7}
+.hero-art:not([data-mode]) .portrait-weather,.hero-art[data-mode=""] .portrait-weather{visibility:hidden}
+.portrait-motion-paused .portrait-drift,.portrait-motion-paused .portrait-weather *,.portrait-motion-paused .portrait-weather:before,.portrait-offscreen .portrait-drift,.portrait-offscreen .portrait-weather *,.portrait-offscreen .portrait-weather:before,.portrait-page-hidden .portrait-drift,.portrait-page-hidden .portrait-weather *,.portrait-page-hidden .portrait-weather:before{animation-play-state:paused!important}
+.portrait-motion-paused .portrait-scene{animation:none!important;transition:none!important;mask-image:none!important}
+@media(prefers-reduced-motion:reduce){.portrait-drift,.portrait-weather{display:none}.portrait-scene{animation:none!important;transition:none!important;mask-image:none!important}}
+.hero-art[data-mode=""] .portrait-weather *,.hero-art[data-mode=""] .portrait-weather:before,.hero-art:not([data-mode]) .portrait-weather *,.hero-art:not([data-mode]) .portrait-weather:before{animation-play-state:paused}

@@ -91,3 +91,15 @@ motion disables the crossfade. The untouched original is the default and remains
 available if JavaScript or an edit fails to load. All three edits loaded in the
 browser; Tech/Art/Monsters selection and Escape reset were verified, with no
 horizontal overflow at 1063px.
+
+### Fluid living-photo effects
+
+AI edits now reveal through a soft radial mask originating at the cursor while
+crossfading over 1.25 seconds. Layered copies of the saved images move gently at
+the edges with a face-protecting mask; tech light trails, painted color flecks and
+monster sparkles supply style-specific ambient motion. These are browser-side
+living-photo effects, not generated videos or animated facial expressions.
+The Pause/Play motion button, offscreen observer and page-visibility listener
+control loops; reduced-motion preferences render static edits immediately.
+Verified keyboard style switching, all layers paused via Pause motion, resume,
+Escape returning to Original, and no horizontal overflow in the desktop preview.
