@@ -131,8 +131,15 @@
       </div>
     </article>
 
-    <article class="feature reveal">
-      <a class="feature-media" href="https://lavinia-ped.github.io/CrossMEP_Dataset/studio/" target="_blank" rel="noopener"><img src="img/crossmep-studio.png" alt="The CrossMEP Generator Studio showing a cross-section as a drawing sheet and in 3D"></a>
+    <article class="feature reveal" id="crossmep">
+      <div class="feature-media crossmep-preview" id="crossmep-preview">
+        <div class="studio-viewport" inert aria-hidden="true">
+          <iframe src="https://lavinia-ped.github.io/CrossMEP_Dataset/studio/" title="Live CrossMEP Generator Studio preview" loading="lazy" tabindex="-1" sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer"></iframe>
+        </div>
+        <a class="studio-preview-link" href="https://github.com/lavinia-ped/CrossMEP_Dataset" target="_blank" rel="noopener" aria-label="Open CrossMEP GitHub repository in a new tab">
+          <span class="studio-preview-caption"><span><i aria-hidden="true"></i>Live Studio preview</span><strong>Open GitHub ↗</strong></span>
+        </a>
+      </div>
       <div class="feature-text">
         <p class="tag">Open dataset · CIB W78 2026</p>
         <h3>CrossMEP: 7,000 generated MEP cross-sections</h3>

@@ -24,3 +24,12 @@ body{overflow-x:clip}.reading-progress{position:absolute;bottom:-1px;left:0;widt
 @media(hover:none){#projects .card:hover,#art .art-card:hover{transform:none}.card:before{display:none}}
 @media(prefers-reduced-motion:reduce){.portal-rings,.threshold-copy{transform:none!important}.feature-media:hover img,#projects .card:hover,#art .art-card:hover{transform:none}}
 @media(min-width:1441px){.hero,.identity-wrap,#art,.threshold{margin-inline:calc(720px - 55vw)}.hero,.identity-wrap,#art{padding-inline:calc(55vw - 720px)}}
+
+/* A real, read-only Studio viewport; the entire card opens its source repository. */
+.studio-viewport{position:relative;aspect-ratio:11/8;overflow:hidden;background:#f5f7fa;pointer-events:none}
+.studio-viewport iframe{display:block;width:1100px;height:800px;max-width:none;border:0;transform:scale(var(--studio-scale,.4));transform-origin:top left;pointer-events:none}
+.studio-preview-link{position:absolute;inset:0;z-index:2;text-decoration:none;display:flex;align-items:flex-end}
+.studio-preview-caption{display:flex;justify-content:space-between;gap:12px;align-items:center;width:100%;padding:15px 18px;background:#09141cf5;border-top:1px solid #34505b;color:#d2e5ed;font:.62rem ui-monospace,monospace}
+.studio-preview-caption>span{display:flex;align-items:center;gap:8px}.studio-preview-caption i{width:5px;height:5px;border-radius:50%;background:#a4ffe0;box-shadow:0 0 8px #a4ffe0}.studio-preview-caption strong{font-weight:500;color:#a4ffe0}
+.crossmep-preview{padding-bottom:48px}.studio-preview-link:hover .studio-preview-caption{background:#12252f}.studio-preview-link:focus-visible{outline:2px solid #a4ffe0;outline-offset:-5px;border-radius:12px}
+@media(max-width:420px){.studio-preview-caption{padding:14px 10px;font-size:.54rem}}

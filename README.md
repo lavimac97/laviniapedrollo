@@ -67,3 +67,10 @@ and anchor checks; preserved collection data; browser inspection of research in
 both themes, project panels and the interlude at 1063px without horizontal
 overflow or broken loaded images. This pass did not emulate smaller viewports
 or OS reduced-motion settings in the browser.
+
+The CrossMEP research card embeds the live Generator Studio in a lazy-loaded,
+sandboxed iframe. Its read-only desktop viewport scales to the card width; the
+accessible overlay opens the CrossMEP repository in a new tab. The separate
+Generator Studio link opens the interactive application. This preview requires
+the externally hosted Studio to be available. Verified the live drawing and 3D
+view render in the browser and the overlay targets the intended GitHub URL.

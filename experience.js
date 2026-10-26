@@ -13,6 +13,15 @@
   if ('ResizeObserver' in window) new ResizeObserver(queueProgress).observe(document.body);
   updateProgress();
 
+  // Render the real Studio at desktop size inside the responsive preview card.
+  const studio = document.querySelector('.studio-viewport');
+  if (studio) {
+    const fitStudio = () => studio.style.setProperty('--studio-scale', studio.clientWidth / 1100);
+    if ('ResizeObserver' in window) new ResizeObserver(fitStudio).observe(studio);
+    else addEventListener('resize', fitStudio);
+    fitStudio();
+  }
+
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   document.querySelectorAll('#projects .card').forEach(card => {
     let frame = 0, point;
