@@ -50,3 +50,20 @@ the portrait controls before hiding a focused companion. The stats and About
 section now extend the opening’s ink-black, mint, blue and lilac palette.
 Verified all three keyboard reactions, one-visible-companion state, Escape focus
 restoration, and About layout without horizontal overflow at 1063px.
+
+### Refined visual system
+
+`experience.css` and `experience.js` extend the neon palette through research,
+projects, publications and contact. New visitors default to dark; existing theme
+preferences are retained. Research figures stay beside their explanations on
+larger screens, project panels have a pointer-positioned spotlight, and a thin
+header progress indicator tracks the document, including gallery height changes.
+The interlude includes orbital outlines driven by the existing scroll progress.
+Pointer and scroll updates use requestAnimationFrame; no animation libraries or
+new dependencies are needed. Reduced-motion styles suppress spatial effects.
+
+Validation: syntax checks for all three JavaScript files; unique IDs, local asset
+and anchor checks; preserved collection data; browser inspection of research in
+both themes, project panels and the interlude at 1063px without horizontal
+overflow or broken loaded images. This pass did not emulate smaller viewports
+or OS reduced-motion settings in the browser.

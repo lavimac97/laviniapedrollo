@@ -3,7 +3,7 @@
 
   // theme
   const root = document.documentElement;
-  try { const t = localStorage.getItem('theme'); root.dataset.theme = t || 'light'; } catch (e) {}
+  try { const t = localStorage.getItem('theme'); root.dataset.theme = t || 'dark'; } catch (e) {}
   document.getElementById('theme').onclick = () => {
     const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
     root.dataset.theme = dark ? 'light' : 'dark';
@@ -19,7 +19,7 @@
   nav.addEventListener('click', e => { if (e.target.tagName === 'A') closeMenu(); });
   const links = [...nav.querySelectorAll('a')];
   const spy = new IntersectionObserver(es => es.forEach(en => {
-    if (en.isIntersecting) links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id));
+    if (en.isIntersecting) links.forEach(a => { const active = a.getAttribute('href') === '#' + en.target.id; a.classList.toggle('active', active); if (active) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current'); });
   }), { rootMargin: '-40% 0px -55% 0px' });
   links.forEach(a => { const s = document.querySelector(a.getAttribute('href')); if (s) spy.observe(s); });
 
