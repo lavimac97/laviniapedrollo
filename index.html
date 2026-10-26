@@ -51,6 +51,21 @@
     <div class="hero-art">
       <span class="portrait-label">HUMAN INTELLIGENCE / 01</span>
       <img class="hero-photo" src="img/lavinia-headshot.jpg" width="1465" height="2048" alt="Lavinia Pedrollo at Stanford" fetchpriority="high">
+      <div class="portrait-interface" hidden>
+        <div class="portrait-lens" aria-hidden="true"></div>
+        <div class="portrait-grid" aria-hidden="true"></div>
+        <div class="portrait-zones" role="group" aria-label="Explore Lavinia’s interests">
+          <button class="portrait-node node-research" data-mode="research" aria-pressed="false" aria-controls="portrait-readout"><span>01</span> Research</button>
+          <button class="portrait-node node-engineering" data-mode="engineering" aria-pressed="false" aria-controls="portrait-readout"><span>02</span> Engineering</button>
+          <button class="portrait-node node-art" data-mode="art" aria-pressed="false" aria-controls="portrait-readout"><span>03</span> Art</button>
+        </div>
+        <div class="portrait-readout" id="portrait-readout">
+          <p class="scan-code">INTERACTIVE PORTRAIT / EXPLORE</p>
+          <strong class="scan-title">A few layers of me.</strong>
+          <p class="scan-description">Move across the portrait or select a marker.</p>
+          <div class="scan-footer"><span class="scan-coordinates" aria-hidden="true">X — / Y —</span><button class="scan-reset" hidden>Reset ×</button></div>
+        </div>
+      </div>
       <p class="portrait-note">Lavinia Pedrollo <span>Stanford, California</span></p>
     </div>
   </section>
@@ -204,6 +219,7 @@
   <p class="caption" id="caption"></p>
 </div>
 
+<script src="portrait.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

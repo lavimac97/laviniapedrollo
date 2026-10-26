@@ -26,3 +26,17 @@ comparison with the original research sections and all collection data; browser
 inspection at 707px width; collection filtering and keyboard dialog opening,
 closing and focus restoration. Wider desktop layouts and OS reduced-motion
 emulation were not browser-tested in this session.
+
+### Interactive portrait
+
+`portrait.js` adds three optional portrait modes. Mouse position selects Research
+(upper left), Engineering (upper right), or Art (lower area), with a scan lens,
+localized blueprint grid and subtle tilt. Selecting a marker pins its mode;
+Reset or Escape clears it. Native buttons support touch and keyboard. Reduced
+motion disables tilt and the moving lens/grid. Without JavaScript, the original
+portrait remains visible without inert controls. This is a decorative effect;
+no camera access, face recognition, or visitor tracking is used.
+
+Verified in the local browser: all three mode selections, Space-key activation,
+Escape reset, selected-button states, loaded portrait, and no horizontal overflow
+at 707px. JavaScript syntax and whitespace checks pass.
