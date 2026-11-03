@@ -116,3 +116,8 @@ the privacy-enhanced player, with lazy loading, an accessible title, fullscreen,
 and a direct watch link. Browser-verified the presentation thumbnail/player and
 publication layout at 1063px; no autoplay is requested. Static checks confirmed
 four records, unique IDs and the correct video ID.
+
+The 2023 MiniRocket publication includes the supplied IEEE WF-IoT Best Paper
+Award certificate, explicitly labelled third place. The original PDF is copied
+unchanged under `awards/`; a rendered preview is available in an accessible native
+details disclosure. Certificate wording was visually checked against the PDF.

@@ -81,3 +81,10 @@ body{overflow-x:clip}.reading-progress{position:absolute;bottom:-1px;left:0;widt
 .publication-video iframe{display:block;width:100%;aspect-ratio:16/9;height:auto;border:0;background:#090e14}
 .publication-video figcaption{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 15px;font:.61rem ui-monospace,monospace;color:var(--muted)}.publication-video figcaption a{margin:0;font-size:.63rem}
 @media(max-width:760px){.publications-heading{flex-direction:column;gap:20px}.publication-video figcaption{flex-wrap:wrap}.pubs li>div{min-width:0}}
+
+/* Recognition attached to the publication it honours. */
+.publication-award{margin:16px 0 20px;border:1px solid #a4ffe04d;border-radius:8px;background:linear-gradient(120deg,#a4ffe009,#b4a2ff0c)}
+.publication-award summary{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;list-style:none;color:var(--ink);font:.72rem ui-monospace,monospace}
+.publication-award summary::-webkit-details-marker{display:none}.award-symbol{font-size:1.4rem;color:var(--accent)}.publication-award summary strong{display:inline-block;margin-left:10px;padding:4px 8px;border-radius:4px;background:#a4ffe018;color:var(--accent);font-size:.65rem;font-weight:500}.award-expand{margin-left:auto;color:var(--accent);font-size:1.2rem}.publication-award[open] .award-expand{transform:rotate(45deg)}
+.award-certificate{padding:0 16px 18px}.award-certificate>p{color:var(--muted)}.award-certificate>a:first-of-type{display:block;margin:14px 0}.award-certificate img{display:block;width:100%;height:auto;border-radius:4px}.award-pdf{font-size:.72rem!important}.publication-award summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:6px}
+@media(max-width:420px){.publication-award summary{padding:12px;font-size:.65rem;gap:8px}.publication-award summary strong{margin:6px 0 0;display:table}.award-certificate{padding-inline:12px}}
