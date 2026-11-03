@@ -17,6 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="experience.css">
+<link rel="stylesheet" href="gallery.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Lavinia Pedrollo","url":"https://lavimac97.github.io/laviniapedrollo/","jobTitle":"PhD researcher","affiliation":{"@type":"Organization","name":"Stanford University"},"email":"mailto:laviniap@stanford.edu","sameAs":["https://github.com/lavimac97","https://linkedin.com/in/lavinia-pedrollo-b277931a3/","https://instagram.com/lavimac97/"]}
 </script>
@@ -241,13 +242,21 @@
     </div>
   </section>
 
-  <section id="art" class="section">
-    <p class="eyebrow">02 / VISUAL IMAGINATION</p>
-    <h2>A different<br><em>kind of logic.</em></h2>
-    <p class="lede">Ink, dots, imagined worlds. Five collections, one restless curiosity. Here is a small collection of my artworks — starting with my favourite.</p>
-    <figure class="favourite reveal"><img src="art/001-1.jpg" alt="My favourite drawing: Da Vinci in dots"><figcaption>My favourite</figcaption></figure>
-    <div class="tabs" id="tabs" role="group" aria-label="Filter artwork by collection"></div>
-    <p id="gallery-status" class="gallery-status" role="status"></p><div class="grid" id="grid"></div><noscript><p>Explore the <a href="art/001-1.jpg">featured drawing</a> or enable JavaScript to browse all five collections.</p></noscript>
+  <section id="art" class="section art-studio">
+    <div class="art-masthead"><p class="eyebrow">02 / VISUAL IMAGINATION</p><span>THE DRAWING ROOM · LAVINIA PEDROLLO</span></div>
+    <div class="art-intro"><h2>A different<br><em>kind of logic.</em></h2><p class="lede">A world built by hand.<br>Dots become faces. Lines become stories.<br>Welcome to the other side of my curiosity.</p></div>
+    <figure class="studio-favourite">
+      <a href="art/001-1.jpg" id="featured-art" aria-label="View my favourite drawing, Da Vinci in dots"><img src="art/001-1.jpg" width="800" height="450" alt="Two interpretations of a bearded Da Vinci portrait, drawn with fine dots in warm red and yellow" loading="lazy"><span class="art-open" aria-hidden="true">Explore the details ↗</span></a>
+      <figcaption><span class="art-small-label">A PERSONAL FAVOURITE / 001</span><h3>One face.<br>A thousand marks.</h3><p>Da Vinci, through dots.<br>My favourite drawing in the collection.</p><span class="favourite-star" aria-hidden="true">✳</span></figcaption>
+    </figure>
+    <div class="collection-heading"><h3>Choose a world.</h3><span>05 COLLECTIONS / SCROLL TO EXPLORE →</span></div>
+    <div class="collection-rail" id="collection-rail" aria-label="Drawing collections"></div>
+    <div class="gallery-toolbar"><div class="tabs" id="tabs" role="group" aria-label="Filter artwork by collection"></div></div>
+    <div id="artworks" class="artworks-heading"><div><p class="art-small-label">THE ARCHIVE</p><h3 id="gallery-title">All drawings.</h3></div><p id="gallery-status" class="gallery-status" role="status"></p></div>
+    <p id="collection-description" class="collection-description"></p>
+    <div class="grid" id="grid" aria-labelledby="gallery-title"></div>
+    <p class="art-endnote"><span aria-hidden="true">✳</span> Made by hand. Shared with you.</p>
+    <noscript><p>Explore the <a href="art/001-1.jpg">featured drawing</a>. Enable JavaScript to browse all five collections.</p></noscript>
   </section>
 
   <section id="contact" class="section narrow reveal">
@@ -265,16 +274,16 @@
 
 <footer class="site-footer">© 2020 - <span id="year"></span> Lavinia Pedrollo · All drawings are my own work.</footer>
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Artwork viewer" hidden>
-  <button class="close" id="close" aria-label="Close">×</button>
-  <button class="prev" id="prev" aria-label="Previous">‹</button>
-  <img id="lightbox-img" alt="">
-  <button class="next" id="next" aria-label="Next">›</button>
-  <p class="caption" id="caption"></p>
-</div>
+<dialog class="art-viewer" id="lightbox" aria-labelledby="viewer-title">
+  <div class="viewer-top"><span class="viewer-label">THE DRAWING ROOM</span><div><button id="art-zoom" type="button" aria-pressed="false">Zoom in +</button><button id="close" type="button" aria-label="Close artwork viewer">Close ×</button></div></div>
+  <div class="viewer-stage" id="viewer-stage"><img id="lightbox-img" alt=""></div>
+  <div class="viewer-bottom"><div><p id="viewer-title"></p><p id="caption" role="status"></p></div><div class="viewer-controls"><button id="prev" type="button" aria-label="Previous drawing">←</button><button id="next" type="button" aria-label="Next drawing">→</button><a id="art-original" href="art/001-1.jpg" target="_blank" rel="noopener">Original ↗</a></div></div>
+  <p class="viewer-hint">← → to explore · Esc to close · Swipe on mobile</p>
+</dialog>
 
 <script src="experience.js"></script>
 <script src="portrait.js"></script>
 <script src="script.js"></script>
+<script src="gallery.js"></script>
 </body>
 </html>

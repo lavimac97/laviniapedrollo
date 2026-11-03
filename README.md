@@ -121,3 +121,19 @@ The 2023 MiniRocket publication includes the supplied IEEE WF-IoT Best Paper
 Award certificate, explicitly labelled third place. The original PDF is copied
 unchanged under `awards/`; a rendered preview is available in an accessible native
 details disclosure. Certificate wording was visually checked against the PDF.
+
+### Drawing room redesign
+
+The art section now has an editorial featured drawing, five visual collection
+covers, a sticky filter bar with work counts, and a framed masonry archive.
+`gallery.js` owns filtering and a native dialog viewer with image decoding,
+zoom/fit, original-file links, arrow/Home/End keyboard navigation, and touch swipe
+navigation. The featured drawing is now viewable in the same viewer. Collection
+names and all 18 archive works are preserved; the personal favourite is also
+preserved separately. No generated art replaces the original drawings.
+
+Verified collection filtering; next/previous navigation; zoom/fit; Escape and
+focus restoration; single-work navigation disabled correctly; no horizontal
+overflow at 390px; and a fully fitted portrait in the mobile viewer. Syntax,
+asset and collection-preservation checks pass. Swipe support is implemented but
+was not tested on a physical touch device.
